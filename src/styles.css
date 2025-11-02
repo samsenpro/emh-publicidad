@@ -1,8 +1,209 @@
 /* ============================================
+   RESET Y CONFIGURACIÓN BASE
+============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  /* Colores del logo EMH - Paleta profesional */
+  --color-primary: #E94B3C;
+  --color-secondary: #F39C12;
+  --color-tertiary: #2C5F2D;
+  --color-gradient: linear-gradient(135deg, #E94B3C 0%, #F39C12 100%);
+  --color-white: #ffffff;
+  --color-dark: #1a1a1a;
+  --color-gray: #666666;
+  --color-light-gray: #f8f9fa;
+  --color-border: #e0e0e0;
+  
+  /* Fuentes */
+  --font-logo: 'Berkshire Swash', cursive;
+  --font-primary: 'Montserrat', sans-serif;
+  
+  /* Sombras profesionales */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-dark);
+  line-height: 1.7;
+  overflow-x: hidden;
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+/* ============================================
+   TIPOGRAFÍA
+============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  color: var(--color-dark);
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: var(--color-gray);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   UTILIDADES
+============================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding: 0 30px;
+}
+
+/* Botones profesionales */
+.btn {
+  display: inline-block;
+  padding: 14px 35px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  letter-spacing: 0.3px;
+  font-family: var(--font-primary);
+}
+
+.btn-primary {
+  background: var(--color-gradient);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: var(--color-tertiary);
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:hover {
+  background: #234d24;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Secciones */
+.section {
+  padding: 100px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.section-title p {
+  color: var(--color-gray);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--color-gradient);
+  margin: 25px auto 0;
+  border-radius: 2px;
+}
+
+/* ============================================
    ANIMACIONES MODERNAS
 ============================================ */
-
-/* Animación de entrada suave */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -39,7 +240,7 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
   to {
     opacity: 1;
@@ -58,7 +259,7 @@
   }
 }
 
-/* Clases de animación reutilizables */
+/* Clases de animación */
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease forwards;
   opacity: 0;
@@ -79,43 +280,38 @@
   opacity: 0;
 }
 
-.animate-slide-down {
-  animation: slideDown 0.6s ease forwards;
-  opacity: 0;
-}
-
-/* Delays para animaciones secuenciales */
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; }
 .delay-4 { animation-delay: 0.4s; }
 .delay-5 { animation-delay: 0.5s; }
-.delay-6 { animation-delay: 0.6s; }
-
-/* Efectos hover modernos */
-.hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-.hover-glow {
-  transition: box-shadow 0.3s ease;
-}
-
-.hover-glow:hover {
-  box-shadow: 0 0 20px rgba(233, 75, 60, 0.5);
-}
 
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
-/* Transiciones suaves para todos los elementos */
-* {
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+  }
+  
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
 }
