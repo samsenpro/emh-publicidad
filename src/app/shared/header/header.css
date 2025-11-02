@@ -1,21 +1,15 @@
-/* ============================================
-   HEADER PROFESIONAL
-============================================ */
 .header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--color-white);
-  box-shadow: var(--shadow-md);
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   animation: slideDown 0.6s ease;
 }
 
-/* ============================================
-   BARRA SUPERIOR
-============================================ */
 .top-bar {
   background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%);
-  color: var(--color-white);
+  color: #ffffff;
   font-size: 0.85rem;
   padding: 10px 0;
 }
@@ -41,7 +35,7 @@
 }
 
 .info-item:hover {
-  color: var(--color-secondary);
+  color: #F39C12;
 }
 
 .info-item .icon {
@@ -61,21 +55,18 @@
   justify-content: center;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
-  color: var(--color-white);
+  color: #ffffff;
   transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-  background: var(--color-gradient);
+  background: linear-gradient(135deg, #E94B3C 0%, #F39C12 100%);
   transform: translateY(-2px);
 }
 
-/* ============================================
-   NAVEGACIÓN PRINCIPAL
-============================================ */
 .main-nav {
   padding: 20px 0;
-  background: var(--color-white);
+  background: #ffffff;
 }
 
 .nav-content {
@@ -84,7 +75,6 @@
   align-items: center;
 }
 
-/* Logo */
 .logo-container {
   display: flex;
   flex-direction: column;
@@ -96,10 +86,10 @@
 }
 
 .logo-text {
-  font-family: var(--font-logo);
+  font-family: 'Berkshire Swash', cursive;
   font-size: 2.5rem;
   font-weight: 400;
-  background: var(--color-gradient);
+  background: linear-gradient(135deg, #E94B3C 0%, #F39C12 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -108,16 +98,15 @@
 }
 
 .logo-subtitle {
-  font-family: var(--font-primary);
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
-  color: var(--color-tertiary);
+  color: #2C5F2D;
   font-weight: 700;
   letter-spacing: 4px;
   margin-top: 2px;
   text-transform: uppercase;
 }
 
-/* Menú de navegación */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -128,8 +117,8 @@
 }
 
 .nav-menu li a {
-  font-family: var(--font-primary);
-  color: var(--color-dark);
+  font-family: 'Montserrat', sans-serif;
+  color: #1a1a1a;
   font-weight: 600;
   font-size: 0.95rem;
   position: relative;
@@ -139,10 +128,9 @@
 }
 
 .nav-menu li a:hover {
-  color: var(--color-primary);
+  color: #E94B3C;
 }
 
-/* Línea inferior animada */
 .nav-menu li a::after {
   content: '';
   position: absolute;
@@ -150,7 +138,7 @@
   left: 0;
   width: 0;
   height: 3px;
-  background: var(--color-gradient);
+  background: linear-gradient(135deg, #E94B3C 0%, #F39C12 100%);
   transition: width 0.3s ease;
 }
 
@@ -159,57 +147,46 @@
   width: 100%;
 }
 
-/* Botón CTA - MEJORADO */
 .nav-cta {
   margin-left: 25px;
 }
 
 .btn-contact {
   position: relative;
-  background: var(--color-gradient);
-  color: var(--color-white);
-  padding: 14px 32px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 15px rgba(233, 75, 60, 0.3);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: none;
-  cursor: pointer;
-}
-
-.btn-contact::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
-  transition: left 0.5s ease;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 11px 26px !important;
+  min-height: 44px !important;
+  background: linear-gradient(135deg, #E94B3C 0%, #F39C12 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.8px !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+  box-shadow: 0 2px 10px rgba(233, 75, 60, 0.3) !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
 }
 
 .btn-contact:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(233, 75, 60, 0.4);
-}
-
-.btn-contact:hover::before {
-  left: 100%;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(233, 75, 60, 0.4) !important;
+  background: linear-gradient(135deg, #d64436 0%, #e08d0f 100%) !important;
+  color: #ffffff !important;
 }
 
 .btn-contact:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 10px rgba(233, 75, 60, 0.3);
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(233, 75, 60, 0.35) !important;
 }
 
-/* Botón móvil */
 .mobile-menu-btn {
   display: none;
   flex-direction: column;
@@ -224,7 +201,7 @@
 .mobile-menu-btn span {
   width: 28px;
   height: 3px;
-  background: var(--color-dark);
+  background: #1a1a1a;
   transition: all 0.3s ease;
   border-radius: 3px;
 }
@@ -241,9 +218,6 @@
   transform: rotate(-45deg) translate(8px, -8px);
 }
 
-/* ============================================
-   RESPONSIVE
-============================================ */
 @media (max-width: 992px) {
   .top-bar {
     display: none;
@@ -259,12 +233,12 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    background: var(--color-white);
+    background: #ffffff;
     padding: 40px 30px;
     gap: 0;
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
     transform: translateX(-100%);
-    transition: transform 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     max-height: calc(100vh - 90px);
     overflow-y: auto;
   }
@@ -277,7 +251,7 @@
     width: 100%;
     text-align: center;
     padding: 15px 0;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid #e0e0e0;
   }
 
   .nav-menu li a {
@@ -293,11 +267,9 @@
   }
 
   .btn-contact {
-    display: flex;
-    width: 100%;
-    text-align: center;
-    padding: 16px 32px;
-    font-size: 0.95rem;
+    width: 100% !important;
+    padding: 14px 32px !important;
+    font-size: 0.9rem !important;
   }
 }
 
