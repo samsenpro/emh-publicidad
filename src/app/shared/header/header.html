@@ -1,1 +1,27 @@
-<p>header works!</p>
+<header class="header">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo">
+        <a routerLink="/">
+          <span class="logo-text">EMH</span>
+          <span class="logo-subtitle">PUBLICIDAD</span>
+        </a>
+      </div>
+      
+      <button class="mobile-menu-btn" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" [class.active]="menuOpen">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Inicio</a></li>
+        <li><a routerLink="/nosotros" routerLinkActive="active" (click)="closeMenu()">Nosotros</a></li>
+        <li><a routerLink="/servicios" routerLinkActive="active" (click)="closeMenu()">Servicios</a></li>
+        <li><a routerLink="/productos" routerLinkActive="active" (click)="closeMenu()">Productos</a></li>
+        <li><a routerLink="/blog" routerLinkActive="active" (click)="closeMenu()">Blog</a></li>
+        <li><a routerLink="/contactanos" class="btn-contact" (click)="closeMenu()">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
